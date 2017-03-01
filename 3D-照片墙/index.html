@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .mrap {
+            perspective: 6000px;
+        }
+        .pic {
+            width: 400px;
+            margin: 200px 400px;
+            transform-style: preserve-3d;
+            /*transform: rotateZ(10deg);*/
+            animation: rotate 10s infinite;
+
+            /*高度的中心对着观察者的视觉中心*/
+            height: 1000px;
+            /*background-color: #1111ee;*/
+        }
+        img {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+
+        }
+        img:nth-child(1) {
+            transform: rotateY(0deg) translateZ(400px);
+        }
+        img:nth-child(2) {
+            transform: rotateY(60deg) translateZ(400px);
+        }
+        img:nth-child(3) {
+            transform: rotateY(120deg) translateZ(400px);
+        }
+        img:nth-child(4) {
+            transform: rotateY(180deg) translateZ(400px);
+        }
+        img:nth-child(5) {
+            transform: rotateY(240deg) translateZ(400px);
+        }
+        img:nth-child(6) {
+            transform: rotateY(300deg) translateZ(400px);
+        }
+        @keyframes rotate {
+            0% {transform: rotate(0deg)}
+            18.7% {transform: rotateY(60deg)}
+            33.3% { transform: rotateY(120deg)}
+            50% {transform: rotateY(180deg)}
+            67.7% { transform: rotateY(240deg)}
+            83.3% { transform: rotateY(300deg)}
+            100% { transform: rotateY(360deg)}
+        }
+    </style>
+</head>
+<body>
+<div class="mrap">
+    <div class="pic">
+        <img src="img/01.jpg"/>
+        <img src="img/02.jpg"/>
+        <img src="img/03.jpg"/>
+        <img src="img/04.jpg"/>
+        <img src="img/05.jpg"/>
+        <img src="img/06.jpg"/>
+    </div>
+</div>
+</body>
+</html>

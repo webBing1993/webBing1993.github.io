@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .max {
+            perspective: 2000px;
+        }
+        .pic {
+            margin: 100px 300px;
+            display: flex;
+            transform-style: preserve-3d;
+            /*transform: rotateY(30deg);*/
+            transform-origin: left top;
+
+            animation: rotate 6s linear infinite;
+        }
+        .pic > div {
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            border-radius: 5px;
+            box-shadow: 3px 3px grey inset;
+            display: flex;
+            box-sizing: border-box;
+            margin-right: 20px;
+            position: absolute;
+        }
+        .cle {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+        }
+        /*里面一点*/
+        .one {
+            align-items: center;
+            justify-content: center;
+            transform: rotate(0deg);
+        }
+        /*左边二点*/
+        .two {
+            padding: 15px;
+            justify-content: space-between;
+            transform: rotateY(270deg);
+            transform-origin: left;
+        }
+        .two .cle:last-child {
+            align-self: flex-end;
+        }
+        /*上面三点*/
+        .three {
+            padding: 10px;
+            justify-content: space-around;
+            transform: rotateX(90deg);
+            transform-origin: top;
+        }
+        .three .cle:nth-child(2) {
+            align-self: center;
+        }
+        .three .cle:last-child {
+            align-self: flex-end;
+        }
+        /*右边四点*/
+        .four {
+            flex-wrap: wrap;
+            padding: 15px 21px;
+            justify-content: space-between;
+            transform: rotateY(90deg);
+            transform-origin: right;
+        }
+        .four .cle:nth-child(n + 3) {
+            align-self: flex-end;
+        }
+        /*下面五点*/
+        .five {
+            flex-wrap: wrap;
+            padding: 15px 21px;
+            justify-content: space-between;
+            transform: rotateX(270deg);
+            transform-origin: bottom;
+        }
+        .five .cle:nth-child(3) {
+            margin: 0 20px;
+        }
+        /*前面六点*/
+        .six {
+            flex-wrap: wrap;
+            padding: 15px 21px;
+            justify-content: space-between;
+            transform: translateZ(100px);
+        }
+        .six .cle:nth-child(3),
+        .six .cle:nth-child(4){
+            align-self: center;
+        }
+        .six .cle:nth-child(n + 5) {
+            align-self: flex-end;
+        }
+        @keyframes rotate {
+            100% {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="max">
+    <div class="pic">
+        <div class="one">
+            <div class="cle"></div>
+        </div>
+
+        <div class="two">
+            <div class="cle"></div>
+            <div class="cle"></div>
+        </div>
+
+        <div class="three">
+            <div class="cle"></div>
+            <div class="cle"></div>
+            <div class="cle"></div>
+        </div>
+
+        <div class="four">
+            <div class="cle"></div>
+            <div class="cle"></div>
+            <div class="cle"></div>
+            <div class="cle"></div>
+        </div>
+
+        <div class="five">
+            <div class="cle"></div>
+            <div class="cle"></div>
+            <div class="cle"></div>
+            <div class="cle"></div>
+            <div class="cle"></div>
+        </div>
+
+        <div class="six">
+            <div class="cle"></div>
+            <div class="cle"></div>
+            <div class="cle"></div>
+            <div class="cle"></div>
+            <div class="cle"></div>
+            <div class="cle"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
