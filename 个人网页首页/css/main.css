@@ -409,19 +409,23 @@ article.dim{
 	z-index: 1;
 }
 .skillSet article.skill:nth-child(2),
-.skillSet article.skill:nth-child(7){
+.skillSet article.skill:nth-child(7),
+.skillSet article.skill:nth-child(11) {
 	background: url(../images/skills/icon-web.svg);
 }
 .skillSet article.skill:nth-child(3),
-.skillSet article.skill:nth-child(8){
+.skillSet article.skill:nth-child(8),
+.skillSet article.skill:nth-child(12) {
 	background: url(../images/skills/icon-ux.svg);
 }
 .skillSet article.skill:nth-child(4),
-.skillSet article.skill:nth-child(9){
+.skillSet article.skill:nth-child(9),
+.skillSet article.skill:nth-child(13) {
 	background: url(../images/skills/icon-dev.svg);
 }
 .skillSet article.skill:nth-child(5),
-.skillSet article.skill:nth-child(10){
+.skillSet article.skill:nth-child(10),
+.skillSet article.skill:nth-child(14) {
 	background: url(../images/skills/icon-ui.svg);
 }
 .skillSet article.skill{
